@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // inherit from Ownable contract 
 contract Assignment9 is Ownable {
     // create a public array called `deployedContracts` to store contracts addresses in it 
-    address [] public deployedContracts ;
+            SimpleContract [] public deployedContracts ;
     // call Ownable constructor of openzeppelin contract
     constructor () Ownable() {
         
