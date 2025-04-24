@@ -17,7 +17,7 @@ contract Assignment9 is Ownable {
     function createContract(uint256 _count) external onlyOwner{
         // deploy new instance of SimpleContract
             // Hint: When you create a new instance, do not forget to pass any arbitrary initial value in the constructor
-        SimpleConstract new_contract = new SimpleContract(_count);
+        SimpleContract new_contract = new SimpleContract(_count);
         // push the new deployed instance to deployedContracts array
         deployedContracts.push(new_contract);
     }
