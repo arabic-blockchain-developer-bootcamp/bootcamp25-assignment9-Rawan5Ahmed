@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // inherit from Ownable contract 
 contract Assignment9 is Ownable {
     // create a public array called `deployedContracts` to store contracts addresses in it 
-            SimpleContract [] public deployedContracts ;
+    address [] public deployedContracts ;
     // call Ownable constructor of openzeppelin contract
     constructor () Ownable() {
         
@@ -14,10 +14,10 @@ contract Assignment9 is Ownable {
 
     // @dev Factory to deploy new instances of `SimpleContract`
     // make only the owner is the one who can call this function
-    function createContract(uint256 _count) external onlyOwner{
+    function createContract() external onlyOwner{
         // deploy new instance of SimpleContract
             // Hint: When you create a new instance, do not forget to pass any arbitrary initial value in the constructor
-        SimpleContract new_contract = new SimpleContract(_count);
+        SimpleContract new_contract = new SimpleContract(100);
         // push the new deployed instance to deployedContracts array
         deployedContracts.push(new_contract);
     }
