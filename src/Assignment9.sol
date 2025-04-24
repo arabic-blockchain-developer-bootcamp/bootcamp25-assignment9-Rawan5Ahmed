@@ -19,7 +19,7 @@ contract Assignment9 is Ownable {
             // Hint: When you create a new instance, do not forget to pass any arbitrary initial value in the constructor
         SimpleContract new_contract = new SimpleContract(100);
         // push the new deployed instance to deployedContracts array
-        deployedContracts.push(new_contract);
+        deployedContracts.push(address(new_contract));
     }
 }
 
